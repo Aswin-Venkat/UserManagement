@@ -1,2 +1,2 @@
 # UserManagement
-Application to List, Add and Delete users
+Application to List, Add and Delete users.
