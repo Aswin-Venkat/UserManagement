@@ -1,9 +1,10 @@
-import React from 'react';
-import { HashRouter, Switch, Route } from 'react-router-dom';
-import LoginContainer from '../view/login/login-container';
-import RegisterContainer from '../view/register/register-container';
-import UserContainer from '../view/user/user-container';
-import * as Navigate from '../constants/route-constants';
+import React from 'react'
+import { HashRouter, Switch, Route } from 'react-router-dom'
+import LoginContainer from '../view/login/login-container'
+import RegisterContainer from '../view/register/register-container'
+import UserContainer from '../view/user/user-container'
+import * as Navigate from '../constants/route-constants'
+
 const App = () => (
   <HashRouter>
     <Switch>

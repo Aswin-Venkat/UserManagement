@@ -4,14 +4,14 @@ import LoginForm from './login-form';
 
 
 const LoginPageContainer = new reduxForm({
-    form: 'loginpageform'
+    form: 'login'
 })(LoginForm);
 
 const mapStatetoProps = state => ({
 
 });
 
-const mapDispatchToProps = (dispach, ownProps) => ({
+const mapDispatchToProps = (dispatch, ownProps) => ({
 
 });
 

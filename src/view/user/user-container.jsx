@@ -4,14 +4,14 @@ import UserForm from './user-form';
 
 
 const UserPageContainer = new reduxForm({
-    form: 'userpageform'
+    form: 'user'
 })(UserForm);
 
 const mapStatetoProps = state => ({
 
 });
 
-const mapDispatchToProps = (dispach, ownProps) => ({
+const mapDispatchToProps = (dispatch, ownProps) => ({
 
 });
 

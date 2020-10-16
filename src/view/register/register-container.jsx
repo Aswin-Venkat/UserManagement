@@ -4,14 +4,14 @@ import RegisterForm from './register-form';
 
 
 const RegisterPageContainer = new reduxForm({
-    form: 'registerpageform'
+    form: 'register'
 })(RegisterForm);
 
 const mapStatetoProps = state => ({
 
 });
 
-const mapDispatchToProps = (dispach, ownProps) => ({
+const mapDispatchToProps = (dispatch, ownProps) => ({
 
 });
 
