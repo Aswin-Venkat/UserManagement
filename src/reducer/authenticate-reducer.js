@@ -1,9 +1,9 @@
 import { LOGIN_USER, REGISTER_USER } from "../constants/action-constants"
 
 const initialState = {
-    username: undefined,
-    password: undefined,
-    loggedIn: false,
+    loginResponse: undefined,
+    registerResponse: undefined,
+    isLoggedIn: false
 }
 
 export default function authenticate(state = initialState, action = '') {

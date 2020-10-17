@@ -22,14 +22,18 @@ class LoginForm extends Component {
                 component={InputField} />
         )
         return (<React.Fragment>
-            <form onSubmit={handleSubmit(this.loginSubmit)}>
-                {loginFields}
-                <a href="=">Forgot Password</a>
-                <Button label="Sign in" type="submit" id="signin" />
-                <br />
-                <hr />
-                <Button label="Register" type="register" id="register" />
-            </form>
+            <div className="container">
+                <div className="column is-12">
+                    <form onSubmit={handleSubmit(this.loginSubmit)}>
+                        {loginFields}
+                        <a href="=">Forgot Password</a>
+                        <Button label="Sign in" type="submit" id="signin" />
+                        <br />
+                        <hr />
+                        <Button label="Register" type="register" id="register" />
+                    </form>
+                </div>
+            </div>
         </React.Fragment>)
     }
 }

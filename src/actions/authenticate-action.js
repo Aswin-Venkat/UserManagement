@@ -1,7 +1,9 @@
 import { LOGIN_USER, REGISTER_USER } from '../constants/action-constants'
-
+import { createHashHistory } from 'history'
+import * as Navigate from '../constants/route-constants'
+import { setUserList } from './user-list-action'
 //LOGIN
-export const setLoginResponse = (loginResponse) => ({
+export const setLogin = (loginResponse) => ({
     type: LOGIN_USER,
     payload: loginResponse
 })
@@ -18,13 +20,27 @@ export const loginUser = (loginDetails) => async (dispatch) => {
             (response) => response.json(),
             (error) => console.log("an error occured", error)
         ).then(loginResponse => {
-            dispatch(setLoginResponse(loginResponse))
+            dispatch(setLogin(loginResponse))
+            if (!loginResponse.error) {
+                return fetch('https://reqres.in/api/users?per_page=12', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }).then(
+                    (response) => response.json(),
+                    (error) => console.log("an error occured", error)
+                ).then(userListResponse => {
+                    dispatch(setUserList(userListResponse))
+                    createHashHistory().push(Navigate.TO_USER)
+                })
+            }
         })
 }
 
 
 //REGISTER
-export const setRegisterResponse = (registerResponse) => ({
+export const setRegister = (registerResponse) => ({
     type: REGISTER_USER,
     payload: registerResponse
 })
@@ -40,7 +56,7 @@ export const registerUser = (registerDetails) => async (dispatch) => {
             (response) => response.json(),
             (error) => console.log("an error occured", error)
         ).then(registerResponse => {
-            dispatch(setRegisterResponse(registerResponse))
+            dispatch(setRegister(registerResponse))
         })
 }
 
