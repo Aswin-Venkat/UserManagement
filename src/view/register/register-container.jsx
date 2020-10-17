@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
+import { registerUser } from '../../actions/authenticate-action'
 import RegisterForm from './register-form';
 
 
@@ -12,6 +13,9 @@ const mapStatetoProps = state => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
+    registerUser: (registerDetails) => {
+        dispatch(registerUser(registerDetails)) //action call
+    }
 
 });
 

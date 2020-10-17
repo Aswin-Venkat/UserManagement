@@ -1,0 +1,46 @@
+{
+    "login": {
+        "email": {
+            "name": "email",
+            "type": "text",
+            "className": "",
+            "placeholder": "",
+            "title": "Email",
+            "label": "Email"
+        },
+        "password": {
+            "name": "password",
+            "type": "password",
+            "className": "",
+            "placeholder": "ß",
+            "title": "Password",
+            "label": "Password"
+        }
+    },
+    "register": {
+        "email": {
+            "name": "email",
+            "type": "textbox",
+            "className": "",
+            "placeholder": "",
+            "title": "Email",
+            "label": "Email"
+        },
+        "password": {
+            "name": "password",
+            "type": "password",
+            "className": "",
+            "placeholder": "",
+            "title": "Password",
+            "label": "Password"
+        },
+        "confirmPassword": {
+            "name": "confirmpassword",
+            "type": "textbox",
+            "className": "",
+            "placeholder": "",
+            "title": "Confirm Password",
+            "label": "Confirm Password"
+        }
+    }
+}
