@@ -31,8 +31,8 @@ class LoginForm extends Component {
                         <Button label="Sign in" type="submit" id="signin" />
                         <br />
                         <hr />
-                        <Button label="Register" type="register" id="register" onClick={navigateToRegister} />
                     </form>
+                    <Button label="Register" type="button" id="register" onClick={navigateToRegister} />
                 </div>
             </div>
         </React.Fragment>)

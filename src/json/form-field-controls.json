@@ -2,7 +2,7 @@
     "login": {
         "email": {
             "name": "email",
-            "type": "text",
+            "type": "email",
             "className": "",
             "placeholder": "",
             "title": "Email",
@@ -20,7 +20,7 @@
     "register": {
         "email": {
             "name": "email",
-            "type": "text",
+            "type": "email",
             "className": "",
             "placeholder": "",
             "title": "Email",
@@ -46,7 +46,7 @@
     "addUser": {
         "email": {
             "name": "email",
-            "type": "textbox",
+            "type": "email",
             "className": "",
             "placeholder": "",
             "title": "Email",

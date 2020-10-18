@@ -3,9 +3,11 @@ import { reduxForm } from 'redux-form';
 import LoginForm from './login-form';
 import { loginUser } from '../../actions/authenticate-action'
 import * as Navigate from '../../constants/route-constants'
+import validators from '../../field-validators/validations'
 
 const LoginContainer = new reduxForm({
-    form: 'login'
+    form: 'login',
+    validate: validators
 })(LoginForm);
 
 const mapStatetoProps = state => ({

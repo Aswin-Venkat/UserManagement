@@ -10,16 +10,16 @@ const Routes = (props) => (
     <HashRouter>
         <Switch>
             <Route
-                exact={props.isLoggedIn}
+                exact
                 path={[Navigate.ROOT, Navigate.TO_LOGIN]}
                 render={props => <LoginContainer {...props} />}
             />
+            <Route
+                path={Navigate.TO_REGISTER}
+                render={props => <RegisterContainer {...props} />}
+            />
             {props.isLoggedIn &&
                 <React.Fragment>
-                    <Route
-                        path={Navigate.TO_REGISTER}
-                        render={props => <RegisterContainer {...props} />}
-                    />
                     <Route
                         path={Navigate.TO_USER_LIST}
                         render={props => <UserListContainer {...props} />}
