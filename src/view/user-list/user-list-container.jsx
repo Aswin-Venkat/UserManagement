@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
 import UserListForm from './user-list-form';
-import { deleteUser } from '../../actions/user-list-action'
-
+import { deleteUserDetails } from '../../actions/user-list-action'
+import * as Navigate from '../../constants/route-constants'
 
 const UserListContainer = new reduxForm({
     form: 'user',
@@ -13,11 +13,11 @@ const mapStatetoProps = state => ({
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-    addUser: () => {
-        console.log("add functionality")
+    navigateToAddUser: () => {
+        ownProps.history.push(Navigate.TO_ADD_USER)
     },
-    deleteUser: (index) => {
-        dispatch(deleteUser(index))
+    deleteUserDetails: (index) => {
+        dispatch(deleteUserDetails(index))
     }
 });
 

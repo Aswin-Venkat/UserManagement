@@ -4,7 +4,6 @@ export const callEndpoint = ({
     method = 'POST',
     body
 }) => async () => {
-    console.log("hello")
     const response = await window.fetch(url, {
         method,
         credentials: 'same-origin',

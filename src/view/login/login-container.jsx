@@ -4,7 +4,7 @@ import LoginForm from './login-form';
 import { loginUser } from '../../actions/authenticate-action'
 import * as Navigate from '../../constants/route-constants'
 
-const LoginPageContainer = new reduxForm({
+const LoginContainer = new reduxForm({
     form: 'login'
 })(LoginForm);
 
@@ -23,4 +23,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 
 });
 
-export default connect(mapStatetoProps, mapDispatchToProps)(LoginPageContainer)
+export default connect(mapStatetoProps, mapDispatchToProps)(LoginContainer)

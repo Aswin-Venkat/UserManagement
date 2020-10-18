@@ -38,7 +38,7 @@ export const getUserList = () => async (dispatch) => {
         (error) => console.log("an error occured", error)
     ).then(userListResponse => {
         dispatch(setUserList(userListResponse))
-        createHashHistory().push(Navigate.TO_USER)
+        createHashHistory().push(Navigate.TO_USER_LIST)
     })
 }
 

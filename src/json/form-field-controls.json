@@ -20,7 +20,7 @@
     "register": {
         "email": {
             "name": "email",
-            "type": "textbox",
+            "type": "text",
             "className": "",
             "placeholder": "",
             "title": "Email",
@@ -41,6 +41,48 @@
             "placeholder": "",
             "title": "Confirm Password",
             "label": "Confirm Password"
+        }
+    },
+    "addUser": {
+        "email": {
+            "name": "email",
+            "type": "textbox",
+            "className": "",
+            "placeholder": "",
+            "title": "Email",
+            "label": "Email"
+        },
+        "firstname": {
+            "name": "first_name",
+            "type": "text",
+            "className": "",
+            "placeholder": "",
+            "title": "firstname",
+            "label": "Firstname"
+        },
+        "lastname": {
+            "name": "last_name",
+            "type": "text",
+            "className": "",
+            "placeholder": "",
+            "title": "lastname",
+            "label": "Lastname"
+        },
+        "image": {
+            "name": "avatar",
+            "type": "image",
+            "className": "",
+            "placeholder": "",
+            "title": "avatar",
+            "label": "Avatar"
+        },
+        "job": {
+            "name": "job",
+            "type": "text",
+            "className": "",
+            "placeholder": "",
+            "title": "job",
+            "label": "Job"
         }
     }
 }

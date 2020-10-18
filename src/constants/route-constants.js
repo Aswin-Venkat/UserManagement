@@ -1,4 +1,5 @@
-export const ROOT = '/';
-export const TO_LOGIN = '/login';
-export const TO_REGISTER = '/register';
-export const TO_USER = '/user';
+export const ROOT = '/'
+export const TO_LOGIN = '/login'
+export const TO_REGISTER = '/register'
+export const TO_USER_LIST = '/userlist'
+export const TO_ADD_USER = '/adduser'
