@@ -22,22 +22,25 @@ export const loginUser = (loginDetails) => async (dispatch) => {
         ).then(loginResponse => {
             dispatch(setLogin(loginResponse))
             if (!loginResponse.error) {
-                return fetch('https://reqres.in/api/users?per_page=12', {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                }).then(
-                    (response) => response.json(),
-                    (error) => console.log("an error occured", error)
-                ).then(userListResponse => {
-                    dispatch(setUserList(userListResponse))
-                    createHashHistory().push(Navigate.TO_USER)
-                })
+                dispatch(getUserList())
             }
         })
 }
 
+export const getUserList = () => async (dispatch) => {
+    return await fetch('https://reqres.in/api/users?per_page=12', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).then(
+        (response) => response.json(),
+        (error) => console.log("an error occured", error)
+    ).then(userListResponse => {
+        dispatch(setUserList(userListResponse))
+        createHashHistory().push(Navigate.TO_USER)
+    })
+}
 
 //REGISTER
 export const setRegister = (registerResponse) => ({
@@ -57,6 +60,9 @@ export const registerUser = (registerDetails) => async (dispatch) => {
             (error) => console.log("an error occured", error)
         ).then(registerResponse => {
             dispatch(setRegister(registerResponse))
+            if (!registerResponse.error) {
+                createHashHistory().push(Navigate.TO_LOGIN)
+            }
         })
 }
 

@@ -12,6 +12,7 @@ class RegisterForm extends Component {
         const { handleSubmit } = this.props
         const registerFields = Object.keys(formFields.register).map(
             index => <Field
+                key={index}
                 name={formFields.register[index].name}
                 type={formFields.register[index].type}
                 className={formFields.register[index].className}

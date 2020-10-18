@@ -1,27 +1,30 @@
-import React from 'react'
-import { HashRouter, Switch, Route } from 'react-router-dom'
-import LoginContainer from '../view/login/login-container'
-import RegisterContainer from '../view/register/register-container'
-import UserContainer from '../view/user/user-container'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import Routes from './routes'
+import { createHashHistory } from 'history'
 import * as Navigate from '../constants/route-constants'
 
-const App = () => (
-  <HashRouter>
-    <Switch>
-      <Route
-        exact
-        path={[Navigate.ROOT, Navigate.TO_HOME]}
-        render={props => <LoginContainer {...props} />}
-      />
-      <Route
-        path={Navigate.TO_REGISTER}
-        render={props => <RegisterContainer {...props} />}
-      />
-      <Route
-        path={Navigate.TO_USER}
-        render={props => <UserContainer {...props} />}
-      />
-    </Switch>
-  </HashRouter>
-)
-export default App
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    !this.props.isLoggedIn && createHashHistory().push(Navigate.ROOT)
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <Routes isLoggedIn={this.props.isLoggedIn} />
+      </React.Fragment>
+    )
+  }
+}
+
+const mapStatetoProps = state => ({
+  isLoggedIn: state.authenticate.isLoggedIn
+})
+
+export default connect(mapStatetoProps)(App)

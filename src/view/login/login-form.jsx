@@ -10,15 +10,16 @@ class LoginForm extends Component {
         loginUser(loginDetails)
     }
     render() {
-        const { handleSubmit } = this.props
+        const { handleSubmit, navigateToRegister } = this.props
         const loginFields = Object.keys(formFields.login).map(
-            index => <Field
-                name={formFields.login[index].name}
-                type={formFields.login[index].type}
-                className={formFields.login[index].className}
-                placeholder={formFields.login[index].placeholder}
-                title={formFields.login[index].title}
-                label={formFields.login[index].label}
+            (key, index) => <Field
+                key={key}
+                name={formFields.login[key].name}
+                type={formFields.login[key].type}
+                className={formFields.login[key].className}
+                placeholder={formFields.login[key].placeholder}
+                title={formFields.login[key].title}
+                label={formFields.login[key].label}
                 component={InputField} />
         )
         return (<React.Fragment>
@@ -30,7 +31,7 @@ class LoginForm extends Component {
                         <Button label="Sign in" type="submit" id="signin" />
                         <br />
                         <hr />
-                        <Button label="Register" type="register" id="register" />
+                        <Button label="Register" type="register" id="register" onClick={navigateToRegister} />
                     </form>
                 </div>
             </div>
