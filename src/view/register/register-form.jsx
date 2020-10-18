@@ -9,7 +9,7 @@ class RegisterForm extends Component {
         registerUser(registerDetails)
     }
     render() {
-        const { handleSubmit } = this.props
+        const { handleSubmit, registerError } = this.props
         const registerFields = Object.keys(formFields.register).map(
             index => <Field
                 key={index}
@@ -23,6 +23,7 @@ class RegisterForm extends Component {
         )
 
         return (<React.Fragment>
+            { registerError && <span>{registerError}</span>}
             <form onSubmit={handleSubmit(this.registerSubmit)}>
                 {registerFields}
                 <Button label="Sign up" type="submit" id="signup" />

@@ -10,7 +10,7 @@ const RegisterPageContainer = new reduxForm({
 })(RegisterForm);
 
 const mapStatetoProps = state => ({
-
+    registerError: state.authenticate.registerResponse && state.authenticate.registerResponse.error
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

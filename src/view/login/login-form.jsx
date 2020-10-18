@@ -10,7 +10,7 @@ class LoginForm extends Component {
         loginUser(loginDetails)
     }
     render() {
-        const { handleSubmit, navigateToRegister } = this.props
+        const { handleSubmit, navigateToRegister, authenticateError } = this.props
         const loginFields = Object.keys(formFields.login).map(
             (key, index) => <Field
                 key={key}
@@ -25,6 +25,8 @@ class LoginForm extends Component {
         return (<React.Fragment>
             <div className="container">
                 <div className="column is-12">
+                    {authenticateError &&
+                        <span>{authenticateError}. Try with test data email as janet.weaver@reqres.in and password as test123</span>}
                     <form onSubmit={handleSubmit(this.loginSubmit)}>
                         {loginFields}
                         <a href="=">Forgot Password</a>

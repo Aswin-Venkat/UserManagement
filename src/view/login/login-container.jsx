@@ -11,7 +11,7 @@ const LoginContainer = new reduxForm({
 })(LoginForm);
 
 const mapStatetoProps = state => ({
-
+    authenticateError: state.authenticate.loginResponse && state.authenticate.loginResponse.error
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
