@@ -1,3 +1,4 @@
 import InputField from './components/input-field'
 import Button from './components/button'
-export { InputField, Button }
+import FormField from './components/form-field'
+export { InputField, Button, FormField }

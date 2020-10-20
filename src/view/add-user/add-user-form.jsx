@@ -23,10 +23,29 @@ class AddUserForm extends Component {
         )
 
         return (<React.Fragment>
-            <form onSubmit={handleSubmit(this.addUserSubmit)}>
-                {addUserFields}
-                <Button label="Add user" type="submit" id="adduser" />
-            </form>
+            <div className="container">
+                <div class="header">
+                    <div className="header-content-wrapper">
+                        <h1>User management portal</h1>
+                        <p><i>*Built with <b>react and redux</b> framework.</i></p>
+                    </div>
+                </div>
+                <div className="page-container">
+                    <div className="page-form">
+                        <div className="form-fields">
+                            <div className="page-title">Add new user</div>
+                            <hr />
+                            <form onSubmit={handleSubmit(this.addUserSubmit)}>
+                                {addUserFields}
+                                <hr />
+                                <Button label="Add user" type="submit" id="adduser" />
+                                <Button label="Go back" type="button" id="back" onClick={this.props.goBack} />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </React.Fragment>)
     }
 }

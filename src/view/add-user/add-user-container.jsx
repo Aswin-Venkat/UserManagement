@@ -17,6 +17,10 @@ const mapStatetoProps = state => ({
 const mapDispatchToProps = (dispatch, ownProps) => ({
     addUser: (userDetails) => {
         dispatch(addUserDetails(userDetails))
+    },
+
+    goBack: () => {
+        ownProps.history.push(Navigate.TO_USER_LIST);
     }
 });
 

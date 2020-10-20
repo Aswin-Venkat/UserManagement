@@ -1,4 +1,161 @@
 
-.container {
-    padding: 30px;
-} 
+body,
+html {
+  background: white;
+  font-size: 15px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  flex: 30%;
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #18509d;
+  color: white;
+
+  a {
+    text-decoration: underline;
+    font-size: 20px;
+    &:hover {
+      cursor: pointer;
+    };
+  }
+}
+
+.page-container {
+  flex: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .page-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+}
+
+.user-container {
+  display: flex;
+  margin-bottom: 10px;
+  background-color: white;
+  width: 75%;
+  border: solid 1pt #18509d;
+  border-radius: 10px;
+  border-left: solid 5px sandybrown;
+  padding: 5px;
+
+  .user-item {
+    background-color: white;
+    font-size: 15px;
+    width: 33%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    .user-item-title {
+      padding-bottom: 10px;
+      font-style: italic;
+      font-size: 10px;
+    }
+
+    button {
+      padding: 3px 10px;
+      border-radius: 10px;
+      margin: 0;
+    }
+
+  }
+
+  .avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+}
+
+.alert {
+  padding: 20px;
+  background-color: #dc2a4d;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  width: 75%;
+}
+
+.form-fields {
+  border: solid 0.5pt #c7c7c7;
+  border-radius: 5px;
+  padding: 3rem;
+  width: 75%;
+  box-shadow: 2px 3px 3px #888888;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+hr {
+  margin-block-start: 30px;
+  margin-block-end: 30px;
+}
+
+input {
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #18509d;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.form-field {
+  padding-bottom: 25px;
+}
+
+.field-error {
+font-size: 14px;
+color: #dc2a4d;
+}
+
+
+
+/* Column container */
+.container {  
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+

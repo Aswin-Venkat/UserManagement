@@ -24,17 +24,34 @@ class LoginForm extends Component {
         )
         return (<React.Fragment>
             <div className="container">
-                <div className="column is-12">
-                    {authenticateError &&
-                        <span>{authenticateError}. Try with test data email as janet.weaver@reqres.in and password as test123</span>}
-                    <form onSubmit={handleSubmit(this.loginSubmit)}>
-                        {loginFields}
-                        <a href="=">Forgot Password</a>
-                        <Button label="Sign in" type="submit" id="signin" />
-                        <br />
-                        <hr />
-                    </form>
-                    <Button label="Register" type="button" id="register" onClick={navigateToRegister} />
+                <div class="header">
+                    <div className="header-content-wrapper">
+                        <h1>User management portal</h1>
+                        <p><i>*Built with <b>react and redux</b> framework.</i></p>
+                    </div>
+                </div>
+                <div className="page-container">
+                    <div className="page-form">
+                        {authenticateError &&
+                            <div class="alert">
+                                <strong>{authenticateError}! - </strong>Try with test data email as janet.weaver@reqres.in and password as test123
+                            </div>
+                        }
+                        <div className="form-fields">
+                            <div className="page-title">Sign in</div>
+                            <hr />
+                            <form onSubmit={handleSubmit(this.loginSubmit)}>
+                                {loginFields}
+                                <a href="=">Forgot Password?</a>
+                                <br />
+                                <hr />
+                                <Button label="Sign in" type="submit" id="signin" />
+                            </form>
+                            <br />
+                            <p>If you dont have an account please register by clicking below</p>
+                            <Button label="Register" type="button" id="register" onClick={navigateToRegister} />
+                        </div>
+                    </div>
                 </div>
             </div>
         </React.Fragment>)

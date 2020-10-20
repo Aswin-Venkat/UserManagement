@@ -57,23 +57,23 @@
             "type": "text",
             "className": "",
             "placeholder": "",
-            "title": "firstname",
-            "label": "Firstname"
+            "title": "First name",
+            "label": "First name"
         },
         "lastname": {
             "name": "last_name",
             "type": "text",
             "className": "",
             "placeholder": "",
-            "title": "lastname",
-            "label": "Lastname"
+            "title": "Last name",
+            "label": "Last name"
         },
         "image": {
             "name": "avatar",
-            "type": "image",
+            "type": "text",
             "className": "",
             "placeholder": "",
-            "title": "avatar",
+            "title": "Avatar",
             "label": "Avatar"
         },
         "job": {
@@ -81,8 +81,8 @@
             "type": "text",
             "className": "",
             "placeholder": "",
-            "title": "job",
-            "label": "Job"
+            "title": "Job description",
+            "label": "Job description"
         }
     }
 }
