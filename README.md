@@ -2,11 +2,11 @@ User Management Application
 
 Libraries used:
 
-1.React
-2.Redux
-3.Redux Form
-4.Enzymes
-5.React Router
+1. React
+2. Redux
+3. Redux Forms
+4. React Router
+5. Enzymes
 
 To run app: npm install and npm start
 
